@@ -6,7 +6,7 @@ function App() {
   const [studantsList, setStudantsList] = useState([]);
 
   useEffect(() => {
-    fetch(`http://hp-api.herokuapp.com/api/characters/students`)
+    fetch(`https://hp-api.herokuapp.com/api/characters/students`)
       .then((response) => response.json())
       .then((response) => setStudantsList(response))
       .catch((err) => console.log(err));

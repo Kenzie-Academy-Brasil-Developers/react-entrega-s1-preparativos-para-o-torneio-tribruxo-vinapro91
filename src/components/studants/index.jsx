@@ -5,8 +5,9 @@ const Studants = ({ studantsList }) => {
   const [filterStudants, setFilterStudants] = useState([]);
   const [btnText, setBtnText] = useState("Começar");
   const [pStatus, setPStatus] = useState("on");
+
   useEffect(() => {
-    fetch(`http://hp-api.herokuapp.com/api/characters/students`)
+    fetch(`https://hp-api.herokuapp.com/api/characters/students`)
       .then((response) => response.json())
       .then((response) => setFilterStudants(response))
       .catch((err) => console.log(err));
@@ -15,7 +16,7 @@ const Studants = ({ studantsList }) => {
   useEffect(() => {
     if (renderStudants.length < 3 && filterStudants.length !== 0) {
       random();
-    }
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [renderStudants]);
 
   const filterHouses = (house) => {

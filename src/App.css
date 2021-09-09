@@ -15,7 +15,7 @@ img {
 }
 .box {
   margin: 0 auto;
-  width: 300px;
+  width: auto;
   height: 500px;
   display: flex;
   padding: 2px;
@@ -23,6 +23,7 @@ img {
 }
 .box div {
   margin: 0 5px 0 0;
+  width: auto;
 }
 .Gryffindor {
   background: rgba(212, 35, 35, 0.6);
@@ -119,4 +120,32 @@ img {
 }
 .on {
   transform: translatey(250px);
+}
+@media (max-width: 599px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .box h1 {
+    font-size: 20px;
+  }
+  img {
+    width: 150px;
+    height: 200px;
+  }
+  .App {
+    height: 1100px;
+  }
+}
+@media (max-width: 1040px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  img {
+    width: 200px;
+    height: 250px;
+  }
 }
